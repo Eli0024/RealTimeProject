@@ -1,0 +1,114 @@
+/* Estilos para el contenedor principal */
+.cont {
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+/* Estilos para el contenedor del dashboard */
+.dashboard {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 20%;
+}
+
+/* Estilos para la fila principal */
+.mainrow {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Estilos para el contenedor de la caja */
+.box1 {
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #e3f2fd;
+  text-align: center;
+  width: 100%;
+}
+
+/* Estilos para el título */
+.box1 h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #0277bd;
+}
+
+/* Estilos para la fecha y hora */
+.datetime {
+  margin: 10px 0;
+}
+
+/* Estilos para el ícono de la temperatura */
+.tempsymbol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+/* Estilos para la temperatura y humedad */
+.temp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* Estilos para la temperatura */
+.Temperature p {
+  margin: 5px 0;
+}
+
+/* Estilos para los íconos de temperatura y humedad */
+.temperature-icon svg, .humidity-icon svg {
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+/* Estilos para la humedad */
+.Humidity {
+  margin-top: 10px;
+}
+.color{
+    color: rgb(28, 218, 28);
+}
+/* Estilos para el indicador de estado */
+.status-indicator {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  /* Estilo para la bolita verde activa */
+  .status-indicator div.active {
+    width: 10px;
+    height: 10px;
+    background-color: rgb(20, 223, 20);
+    border-radius: 50%;
+    margin-right: 10px;
+    display: inline-block;
+  }
+  
+  /* Estilo para la bolita gris inactiva */
+  .status-indicator div.inactive {
+    width: 10px;
+    height: 10px;
+    background-color: gray;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: inline-block;
+  }
+  
+  /* Estilo para el texto de estado */
+  .status-indicator p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+  }
+  

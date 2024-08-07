@@ -1,0 +1,19 @@
+<body>
+    <div class="container">
+        <h1>Registrar Medicion</h1>
+        <form id="registro-granja-form">
+            
+            <input type="number" id="temperatura" name="temperatura" placeholder="Temperatura" [(ngModel)]="medicion.temperatura" required>
+            <input type="number" id="humedad" name="humedad" placeholder="humedad" [(ngModel)]="medicion.humedad" required>
+            <input type="date" id="fecha" name="fecha" placeholder="Fecha" [(ngModel)]="medicion.fecha" required>
+            <input type="time" id="hora" name="hora" placeholder="Hora"  [(ngModel)]="medicion.hora" required>
+            <input type="number" id="promedio_temperatura" name="promedio_temperatura" placeholder="Promedio_Temperatura"  [(ngModel)]="medicion.promedio_temperatura" required>
+            <input type="number" id="id_config" name="id_config" placeholder="Id_Config" [(ngModel)]="medicion.id_config_parametro" required>
+            <button class="btn btn-primary" type="button" (click)='create()' *ngIf="!medicion.id_medicion else elseBlock">Registrar</button>
+
+            <ng-template #elseBlock>
+            <button class="btn btn-primary" type="button" (click)='update()'>Actualizar</button>
+        </ng-template>
+        </form> 
+    </div>
+</body>

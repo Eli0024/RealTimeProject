@@ -1,0 +1,19 @@
+<body>
+    <div class="container">
+        <h1>Registro de Usuarios</h1>
+        <form id="registro-usuarios-form" (ngSubmit)="create()" usuarioForm="ngForm">
+            
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre de Usuario" [(ngModel)]="usuario.nombre" required>
+            <input type="text" id="apellido" name="apellido" placeholder="Apellido" [(ngModel)]="usuario.apellido" required>
+            <input type="text" id="email" name="email" placeholder="Email" [(ngModel)]="usuario.email" required>
+            <input type="password" id="contrasena" name="contrasena" placeholder="Contrasena"  [(ngModel)]="usuario.contrasena" required>
+            <input type="password" id="confirmarcontrasena" name="confirmarcontrasena" placeholder="Confirmar_Contrasena" [(ngModel)]="usuario.confirmar_contrasena" required>
+            <input type="number" id="edad" name="edad" placeholder="Edad" [(ngModel)]="usuario.edad" required>
+            <button class="btn btn-primary" type="button" (click)='create()' *ngIf="!usuario.id_usuario else elseBlock">Registrar</button>
+
+            <ng-template #elseBlock>
+            <button class="btn btn-primary" type="button" (click)='update()'>Actualizar</button>
+        </ng-template>
+        </form> 
+    </div>
+</body>

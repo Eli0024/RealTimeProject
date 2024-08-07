@@ -1,0 +1,17 @@
+<body>
+    <div class="container">
+        <h1>Registrar Galpon</h1>
+        <form id="registro-galpon-form">
+            
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre del Galpon" [(ngModel)]="galpon.nombre" required>
+            <input type="text" id="ubicacion" name="ubicacion" placeholder="Ubicacion" [(ngModel)]="galpon.ubicacion" required>
+            <input type="text" id="capacidad" name="capacidad" placeholder="Capacidad" [(ngModel)]="galpon.capacidad" required>
+            <input type="number" id="id_usuario" name="id_usuario" placeholder="Id_Usuario" [(ngModel)]="galpon.id_usuario" required>
+            <button class="btn btn-primary" type="submit" (click)='create()' *ngIf="!galpon.id_galpon else elseBlock">Registrar</button>
+
+            <ng-template #elseBlock>
+            <button class="btn btn-primary" type="submit" (click)='update()'>Actualizar</button>
+        </ng-template>
+        </form> 
+    </div>
+</body>

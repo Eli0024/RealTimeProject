@@ -1,0 +1,10 @@
+export class Usuario {
+   id_usuario: number;
+   nombre: string;
+   apellido: string;
+   email:string;
+   contrasena: string;
+   confirmar_contrasena: string;
+   edad: number;
+  }
+  

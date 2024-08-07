@@ -1,0 +1,26 @@
+<div class="container">
+  <h1>Conexión Bluetooth con Arduino</h1>
+  <button id="connect-btn">Conectar</button>
+  <h2 id="status">Estado de la conexión: Desconectado</h2>
+</div>
+
+<script>
+  document.getElementById('connect-btn').addEventListener('click', async () => {
+      try {
+          const device = await navigator.bluetooth.requestDevice({
+              filters: [{ services: ['serial'] }]
+          });
+          
+          const server = await device.gatt.connect();
+          const service = await server.getPrimaryService('serial');
+          const characteristic = await service.getCharacteristic('serial');
+
+          // Ahora puedes enviar y recibir datos a través de 'characteristic'
+
+          document.getElementById('status').innerText = 'Estado de la conexión: Conectado';
+      } catch (error) {
+          console.error('Error de conexión Bluetooth:', error);
+          document.getElementById('status').innerText = 'Error de conexión';
+      }
+  });
+</script>

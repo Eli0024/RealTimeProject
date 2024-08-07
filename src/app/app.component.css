@@ -1,0 +1,46 @@
+* {
+    background: #0d6efd;
+    color: white;
+  }
+  
+  .navbar {
+    display: flex;
+    background-color: #0d6efd;
+    color:white;
+    font-size: 30px;
+}
+.navbar-brand {
+    display: flex;
+    background-color:#0d6efd;
+    color:white;
+    font-size: 30px;
+}
+.container{
+    color:white;
+    background: #0d6efd;
+    display: flex;
+    flex-direction:row;
+    width: 100%;
+   }
+
+button {
+    margin:10px;
+}
+h2 {
+    text-align: left;
+}
+
+  .img-thumbnail {
+    background: transparent;
+    border: #0d6efd;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    width: 120px;
+    height: auto;
+    margin-left: 10px;
+  }
+  
+  .nav-link active {
+    color:white;
+  }
+
+  

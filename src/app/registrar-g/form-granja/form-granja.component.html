@@ -1,0 +1,17 @@
+<body>
+    <div class="container">
+      <h1>Registrar Granja</h1>
+      <form (ngSubmit)="create()" #granjaForm="ngForm">
+        <input type="text" id="nombre_granja" name="nombre_granja" placeholder="Nombre de la Granja" [(ngModel)]="granja.nombre_granja" required>
+        <input type="text" id="direccion" name="direccion" placeholder="Direccion" [(ngModel)]="granja.direccion" required>
+        <input type="number" id="telefono" name="telefono" placeholder="Telefono" [(ngModel)]="granja.telefono" required>
+        <input type="text" id="email" name="email" placeholder="Email" [(ngModel)]="granja.email" required>
+        <input type="number" id="id_usuario" name="id_usuario" placeholder="Id_Usuario" [(ngModel)]="granja.id_usuario" required>
+        <button class="btn btn-primary" type="submit" *ngIf="!granja.id_granja else elseBlock">Registrar</button>
+        <ng-template #elseBlock>
+          <button class="btn btn-primary" type="button" (click)="update()">Actualizar</button>
+        </ng-template>
+      </form>
+    </div>
+  </body>
+  

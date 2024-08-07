@@ -1,0 +1,63 @@
+body {
+    background: #ffffff;
+  }
+  
+  .container {
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    place-items: center;
+    height: 80vh;
+  }
+  
+  .profile-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .image-container {
+    max-width: 200px; 
+    margin: 0 auto; 
+  }
+  
+  .container h1 {
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group input[type="password"],
+  .form-group input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  

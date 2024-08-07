@@ -1,3 +1,37 @@
 import { Routes } from '@angular/router';
 
-export const routes: Routes = [];
+
+export const routes: Routes = [
+
+    { path: '', loadChildren:() => import('./dashboard/dashboard.module').then (m => m.DashboardModule)},
+    { path: 'index', loadChildren:() => import('./indexini/indexini.module').then (m => m.IndexiniModule)},
+    { path: 'form-granja', loadChildren:() => import('./registrar-g/form-granja/form-granja.module').then (m => m.FormGranjaModule)},
+    { path: 'form-granja/:id', loadChildren:() => import('./registrar-g/form-granja/form-granja.module').then (m => m.FormGranjaModule)},
+    { path: 'form-encargado', loadChildren:() => import('./registrar-encargado/form-encargado/form-encargado.module').then (m => m.FormEncargadoModule)},
+    { path: 'form-encargado/:id', loadChildren:() => import('./registrar-encargado/form-encargado/form-encargado.module').then (m => m.FormEncargadoModule)},
+    { path: 'form-galpon', loadChildren:() => import('./registrar-galpon/form-galpon/form-galpon.module').then (m => m.FormGalponModule)},
+    { path: 'form-galpon/:id', loadChildren:() => import('./registrar-galpon/form-galpon/form-galpon.module').then (m => m.FormGalponModule)},
+    { path: 'form-mediciones', loadChildren:() => import('./mediciones/form-mediciones/form-mediciones.module').then (m => m.FormMedicionesModule)},
+    { path: 'form-mediciones/:id', loadChildren:() => import('./mediciones/form-mediciones/form-mediciones.module').then (m => m.FormMedicionesModule)},
+    { path: 'form-parametros', loadChildren:() => import('./establecer/form-parametros/form-parametros.module').then (m => m.FormParametrosModule)},
+    { path: 'form-parametros/:id_config', loadChildren:() => import('./establecer/form-parametros/form-parametros.module').then (m => m.FormParametrosModule)},
+    { path: 'form-registro', loadChildren:() => import('./login/form-registro/form-registro.module').then (m => m.FormRegistroModule)},
+    { path: 'form-registro/:id', loadChildren:() => import('./login/form-registro/form-registro.module').then (m => m.FormRegistroModule)},
+    { path: 'inicio', loadChildren:() => import('./inicio/inicio.module').then (m => m.InicioModule)},
+    { path: '', loadChildren:() => import('./inicio/inicio.module').then (m => m.InicioModule)},
+    { path: 'exporda', loadChildren:() => import('./exporda/exporda.module').then (m => m.ExpordaModule)},
+    { path: 'alerta', loadChildren:() => import('./alerta/alerta.module').then (m => m.AlertaModule)},
+    { path: 'conexion', loadChildren:() => import('./conexion/conexion.module').then (m => m.ConexionModule)},
+    { path: 'copia-S', loadChildren:() => import('./copia-s/copia-s.module').then (m => m.CopiaSModule)},
+    { path: 'establecer', loadChildren:() => import('./establecer/establecer.module').then (m => m.EstablecerModule)},
+    { path: 'historial', loadChildren:() => import('./historial/historial.module').then (m => m.HistorialModule)},
+    { path: 'notifi', loadChildren:() => import('./notifi/notifi.module').then (m => m.NotifiModule)},
+    { path: 'perfil', loadChildren:() => import('./perfil/perfil.module').then (m => m.PerfilModule)},
+    { path: 'registrar-g', loadChildren:() => import('./registrar-g/registrar-g.module').then (m => m.RegistrarGModule)},
+    { path: 'registrar-galpon', loadChildren:() => import('./registrar-galpon/registrar-galpon.module').then (m => m.RegistrarGalponModule)},
+    { path: 'mediciones', loadChildren:() => import('./mediciones/mediciones.module').then (m => m.MedicionesModule)},
+    { path: 'registrar-encargado', loadChildren:() => import('./registrar-encargado/registrar-encargado.module').then (m => m.RegistrarEncargadoModule)},
+    { path: 'registro-usuario', loadChildren:() => import('./login/registro-usuario/registro-usuario.module').then (m => m.RegistroUsuarioModule)},
+    { path: 'configuracion', loadChildren:() => import('./configuracion/configuracion.module').then (m => m.ConfiguracionModule)},
+    { path: 'salir', loadChildren:() => import('./salir/salir.module').then (m => m.SalirModule)},
+];

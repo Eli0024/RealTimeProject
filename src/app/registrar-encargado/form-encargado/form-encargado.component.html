@@ -1,0 +1,18 @@
+<body>
+    <div class="container">
+        <h1>Registrar Encargado</h1>
+        <form id="registro-encargado-form">
+            
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre" [(ngModel)]="encargado.nombre" required>
+            <input type="text" id="apellido" name="apellido" placeholder="Apellido" [(ngModel)]="encargado.apellido" required>
+            <input type="number" id="telefono" name="telefono" placeholder="Telefono" [(ngModel)]="encargado.telefono" required>
+            <input type="text" id="email" name="email" placeholder="Email"  [(ngModel)]="encargado.email" required>
+            <input type="number" id="id_galpon" name="id_galpon" placeholder="Id_Galpon" [(ngModel)]="encargado.id_galpon" required>
+            <button class="btn btn-primary" type="button" (click)='create()' *ngIf="!encargado.id_encargado else elseBlock">Registrar</button>
+
+            <ng-template #elseBlock>
+            <button class="btn btn-primary" type="button" (click)='update()'>Actualizar</button>
+        </ng-template>
+        </form> 
+    </div>
+</body>

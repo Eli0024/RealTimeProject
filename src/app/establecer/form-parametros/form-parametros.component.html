@@ -1,0 +1,21 @@
+<body>
+    <div class="container">
+        <h1>Registrar Parametros</h1>
+        <form id="registro-parametros-form">
+            
+            <input type="text" id="tipo_aves" name="tipo_aves" placeholder="Tipo_aves" [(ngModel)]="parametro.tipo_aves" required>
+            <input type="number" id="tem_minima" name="tem_minima" placeholder="tem_minima" [(ngModel)]="parametro.tem_minima" required>
+            <input type="number" id="tem_maxima" name="tem_maxima" placeholder="tem_maxima" [(ngModel)]="parametro.tem_maxima" required>
+            <input type="number" id="hum_minima" name="hum_minima" placeholder="hum_minima"  [(ngModel)]="parametro.hume_minima" required>
+            <input type="number" id="hum_maxima" name="hum_maxima" placeholder="hum_maxima" [(ngModel)]="parametro.hume_maxima" required>
+            <input type="number" id="promedio_temperatura" name="promedio_temperatura" placeholder="promedio_temperatura" [(ngModel)]="parametro.promedio_temperatura" required>
+            <input type="number" id="id_usuario" name="id_usuario" placeholder="Id_Usuario" [(ngModel)]="parametro.id_usuario" required>
+            <button class="btn btn-primary" type="button" (click)="create()" *ngIf="!parametro.id_config; else elseBlock">Registrar</button>
+
+            <ng-template #elseBlock>
+              <button class="btn btn-primary" type="button" (click)="update()">Actualizar</button>
+            </ng-template>
+            
+        </form> 
+    </div>
+</body>
