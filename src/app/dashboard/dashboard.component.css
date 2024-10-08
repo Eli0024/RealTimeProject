@@ -1,0 +1,266 @@
+/* Estilos Generales */
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+
+}
+
+/* Estilos para el Contenedor Principal */
+.container {
+  padding: 40px;
+}
+
+/* Estilos para las Tarjetas */
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  margin-bottom: 25px;
+  background-color: #ffffff;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #212529;
+  margin-bottom: 10px;
+}
+
+/* Tarjetas de Navegación con Colores Modernos */
+.card-success {
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+}
+
+.card-warning {
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+}
+
+.card-info {
+  background-color: #d1ecf1;
+  border: 1px solid #bee5eb;
+}
+
+.card-primary {
+  background-color: #e2e6ea;
+  border: 1px solid #d6d8db;
+}
+
+.card-danger {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
+
+/* Estilos para enlaces dentro de las tarjetas */
+.card a {
+  text-decoration: none;
+  /* Asegura que no haya subrayado */
+  color: inherit;
+  /* Hereda el color del texto del contenedor */
+}
+
+/* Asegura que los enlaces en el card-body no tengan subrayado */
+.card-body a {
+  text-decoration: none;
+  /* Elimina subrayado */
+  color: #212529;
+  /* Ajusta el color del texto para que sea consistente */
+}
+
+/* Botón Primario */
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Tarjetas de Estadísticas */
+.card-statistics {
+  border-radius: 12px;
+  border: 1px solid #dee2e6;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  margin-bottom: 25px;
+  width: 140%;
+}
+
+.card-statistics .card-body {
+  padding: 1.5rem;
+}
+
+/* Lista de Estadísticas */
+.list-group-item {
+  border: none;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.list-group-item:last-child {
+  border-bottom: none;
+}
+
+.list-group-item .badge {
+  font-size: 0.875rem;
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+/* Contenedor del Gráfico */
+#container {
+  width: 50px;
+  height: 350px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  margin-top: 2rem;
+  background-color: #ffffff;
+}
+
+/* Tema Oscuro (opcional) */
+body[data-theme="dark"] {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+body[data-theme="dark"] .card {
+  background-color: #2c2c2c;
+  border: 1px solid #3c3c3c;
+}
+
+body[data-theme="dark"] .btn-primary {
+  background-color: #1e90ff;
+}
+
+#button-pie {
+  width: 8%;
+  justify-content: center;
+}
+
+.pie {
+  display: flex;
+  justify-content: center;
+}
+
+/* santiago */
+
+.circle {
+  font-size: 20px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: background-color 0.5s;
+  border: 2px solid rgb(75, 74, 74);
+}
+
+.data {
+  text-align: center;
+}
+
+.low {
+  background-color: #aaf;
+}
+
+.medium {
+  background-color: #ffeb3b;
+}
+
+.high {
+  background-color: #f44336;
+}
+
+#containersensor {
+  width: 350px;
+  height: 525px;
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 12px;
+  /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); */
+
+}
+
+@media (max-width: 600px) {
+  #containersensor {
+    padding: 20px;
+    /* Reduce el padding en pantallas pequeñas */
+  }
+}
+
+.inner-circle {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.744);
+
+}
+
+.colmy-4 {
+  display: grid;
+  grid-template-columns: 3fr 7fr;
+}
+
+.concricle {
+  padding: 15px;
+  border-radius: 50px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.744);
+
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+}
+
+.fullscreen-button {
+  margin-left: 20px; /* Espacio entre el botón y el dropdown */
+}

@@ -1,0 +1,49 @@
+<app-home></app-home>
+<app-header></app-header>
+
+    <div class="container">
+        <h1 class="font-bold text-2xs">REGISTRAR GALPON</h1>
+        <form id="registro-galpon-form">
+
+            <div class="input-container">
+                <div class="icon-container bg-gradient-to-tr from-blue-600 to-blue-400 text-white shadow-blue-500/40">
+                    <span class="material-symbols-outlined">
+                        id_card
+                        </span>
+                </div>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre del Galpon" [(ngModel)]="galpon.nombre" required>
+                </div>      
+            <div class="input-container">
+                <div class="icon-container bg-gradient-to-tr from-blue-600 to-blue-400 text-white shadow-blue-500/40">
+                    <span class="material-symbols-outlined">
+                        home_pin
+                        </span>
+                </div>
+            <input type="text" id="ubicacion" name="ubicacion" placeholder="Ubicacion" [(ngModel)]="galpon.ubicacion" required>
+                </div>
+            
+            <div class="input-container">
+                <div class="icon-container bg-gradient-to-tr from-blue-600 to-blue-400 text-white shadow-blue-500/40">
+                    <span class="material-symbols-outlined">
+                        view_comfy_alt
+                        </span>
+                </div>
+            <input type="text" id="capacidad" name="capacidad" placeholder="Capacidad" [(ngModel)]="galpon.capacidad" required>
+                </div>
+            
+            <div class="input-container">
+                <div class="icon-container bg-gradient-to-tr from-blue-600 to-blue-400 text-white shadow-blue-500/40">
+                    <span class="material-symbols-outlined">
+                        account_circle
+                        </span>
+                </div>
+            <input type="number" id="id_usuario" name="id_usuario" placeholder="Id_Usuario" [(ngModel)]="galpon.id_usuario" required>
+                </div>
+
+            <button class="btn btn-primary" (click)="save()" *ngIf="!galpon.id_galpon else elseBlock">Registrar</button>
+            <ng-template #elseBlock>
+              <button class="btn btn-primary" (click)="save()">Actualizar</button>
+            </ng-template>
+        </form> 
+    </div>
+

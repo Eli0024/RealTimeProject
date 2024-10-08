@@ -1,0 +1,151 @@
+.min-h-screen {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegúrate de que este ajuste esté presente */
+}
+/* Estilos Generales */
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilos para el Contenedor Principal */
+  .container {
+    padding: 40px;
+  }
+  
+  /* Estilos para las Tarjetas */
+  .card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    margin-bottom: 25px;
+    background-color: #ffffff;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+    text-align: center;
+  }
+  
+  .card-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #212529;
+    margin-bottom: 10px;
+  }
+  
+  /* Tarjetas de Navegación con Colores Modernos */
+  .card-success {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+  }
+  
+  .card-warning {
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+  }
+  
+  .card-info {
+    background-color: #d1ecf1;
+    border: 1px solid #bee5eb;
+  }
+  
+  .card-primary {
+    background-color: #e2e6ea;
+    border: 1px solid #d6d8db;
+  }
+  
+  .card-danger {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+  }
+  
+  /* Estilos para enlaces dentro de las tarjetas */
+  .card a {
+    text-decoration: none; /* Asegura que no haya subrayado */
+    color: inherit; /* Hereda el color del texto del contenedor */
+  }
+  
+  /* Asegura que los enlaces en el card-body no tengan subrayado */
+  .card-body a {
+    text-decoration: none; /* Elimina subrayado */
+    color: #212529; /* Ajusta el color del texto para que sea consistente */
+  }
+  
+  /* Botón Primario */
+  .btn-primary {
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Tarjetas de Estadísticas */
+  .card-statistics {
+    border-radius: 12px;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+  }
+  
+  .card-statistics .card-body {
+    padding: 1.5rem;
+  }
+  
+  /* Lista de Estadísticas */
+  .list-group-item {
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 20px;
+    background-color: #ffffff;
+  }
+  
+  .list-group-item:last-child {
+    border-bottom: none;
+  }
+  
+  .list-group-item .badge {
+    font-size: 0.875rem;
+    background-color: #007bff;
+    color: #ffffff;
+  }
+
+  /* Tema Oscuro (opcional) */
+  body[data-theme="dark"] {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+  }
+  
+  body[data-theme="dark"] .card {
+    background-color: #2c2c2c;
+    border: 1px solid #3c3c3c;
+  }
+  
+  body[data-theme="dark"] .btn-primary {
+    background-color: #1e90ff;
+  }
+  

@@ -1,0 +1,31 @@
+<body>    
+        <div id="contenedor">
+            <img id="jj" src="../assets/img/Mi proyecto-1.png" alt="">
+
+            <div id="central">
+                <div class="n1">
+                 BIENVENIDO
+                </div>
+                <div id="login">
+                    <div class="titulo">
+                        Ingresar
+                    </div>
+                    
+                    <form id="loginform">
+
+                        <input type="text" [(ngModel)]="username" name="usuario" placeholder="Usuario" required>
+                        
+                        <input type="password" [(ngModel)]="password"  placeholder="Contraseña" name="password" required>
+        
+                        <button type="submit" class="submit-button" (click)="login()">Login</button>
+                    </form>
+                    <div class="pie-form">
+                        <a class="registro" [routerLink]="['/register']">¿No tienes Cuenta? Registrate</a>
+                    </div>
+                </div>
+                <div *ngIf="errorMessage" class="message error">
+                    {{ errorMessage }}
+                  </div>
+            </div>
+        </div>
+</body>

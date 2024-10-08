@@ -1,0 +1,57 @@
+<app-home></app-home>
+<app-header></app-header>
+<div class="container">
+    <h1 class="font-bold text-2xs">REGISTRAR MEDICION</h1>
+    <form id="registro-granja-form">
+
+        <div class="input-container">
+            <div class="icon-container bg-gradient-to-tr from-blue-600 to-blue-400 text-white shadow-blue-500/40">
+                <span class="material-symbols-outlined">
+                    thermostat
+                </span>
+            </div>
+            <input type="number" id="temperatura" name="temperatura" placeholder="Temperatura"
+                [(ngModel)]="medicion.temperatura" required>
+        </div>
+        <div class="input-container">
+            <div class="icon-container bg-gradient-to-tr from-blue-600 to-blue-400 text-white shadow-blue-500/40">
+                <span class="material-symbols-outlined">
+                    humidity_percentage
+                </span>
+            </div>
+            <input type="number" id="humedad" name="humedad" placeholder="humedad" [(ngModel)]="medicion.humedad"
+                required>
+        </div>
+        <div class="input-container">
+            <div class="icon-container bg-gradient-to-tr from-blue-600 to-blue-400 text-white shadow-blue-500/40">
+                <span class="material-symbols-outlined">
+                    calendar_month
+                </span>
+            </div>
+            <input type="date" id="fecha" name="fecha" placeholder="Fecha" [(ngModel)]="medicion.fecha" required>
+        </div>
+        <div class="input-container">
+            <div class="icon-container bg-gradient-to-tr from-blue-600 to-blue-400 text-white shadow-blue-500/40">
+                <span class="material-symbols-outlined">
+                    more_time
+                </span>
+            </div>
+            <input type="time" id="hora" name="hora" placeholder="Hora" [(ngModel)]="medicion.hora" required>
+        </div>
+        <div class="input-container">
+            <div class="icon-container bg-gradient-to-tr from-blue-600 to-blue-400 text-white shadow-blue-500/40">
+                <span class="material-symbols-outlined">
+                    avg_pace
+                </span>
+            </div>
+ 
+        </div>
+
+        <button class="btn btn-primary" type="button" (click)='create()'
+            *ngIf="!medicion.id_medicion else elseBlock">Registrar</button>
+
+        <ng-template #elseBlock>
+            <button class="btn btn-primary" type="button" (click)='update()'>Actualizar</button>
+        </ng-template>
+    </form>
+</div>

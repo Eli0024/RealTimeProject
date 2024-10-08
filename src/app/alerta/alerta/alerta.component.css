@@ -1,0 +1,54 @@
+.title{
+    color: white;
+}
+
+.container-modal{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 20%; left: 50%;
+    transform: translate(-50%, 30%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+
+}
+.content-modal{
+  display: flex;
+ justify-content:CENTER;
+   align-items: end;
+  flex-direction: column;  
+   width: 500px; 
+   max-width: 300px;
+   height: 50PX;
+   padding: 70px;
+   border-radius: 3px;
+   background-color:rgb(235, 227, 227) ;
+
+}
+.content-modal .btn-Aceptar{
+    width: 170px;
+    height: 500px;
+   
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    
+
+}
+.content-modal .btn-Aceptar label{
+    padding: 4px 5px;
+    background-color: rgb(209, 204, 204);
+    border-radius: 3px;
+    color: rgb(14, 2, 2);
+    cursor: pointer;
+    
+    
+}
+.image{
+    transform: translate(-2%, 160%);
+}  
+
+
+

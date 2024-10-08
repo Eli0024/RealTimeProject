@@ -1,0 +1,22 @@
+*{
+    background-color: #ffffff;
+}
+.container-icono{
+    display:flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content:top;
+    color: white;
+    width: auto;
+    height: 100vh;
+    gap: 200px;
+
+}
+.img{
+ width: 250px;
+
+}
+.icono{
+    color: white;
+}

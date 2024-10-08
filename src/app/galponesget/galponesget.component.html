@@ -1,0 +1,16 @@
+<app-home></app-home>
+<app-header></app-header>
+<div class="container">
+        <div class="card border-primary mb-3" style="max-width: 18rem;" *ngFor="let item of galpones">
+          <div class="card-header">{{item.nombre}}<br> Id_usuario:{{item.id_usuario}} <br>Usuario: {{user.username}} </div>
+          <div class="card-body">
+            <h5 class="card-title"></h5>
+            <p class="card-text">Capacidad Pollos: {{item.capacidad}}</p>
+            <p *ngIf="item.id_galpon == 1">Temperatura:  {{ temperaturaActual  }} </p>
+            <p *ngIf="item.id_galpon == 1">Humedad:  {{ humedadActual }} </p>
+          </div>
+          <button type="button" class="btn btn-primary" [routerLink]="['/dashboard']">Dashboard</button>
+          </div>
+
+</div>
+

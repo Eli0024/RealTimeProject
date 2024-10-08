@@ -1,0 +1,20 @@
+.custom-table {
+    font-size: 1rem; 
+    width: 90%; 
+    margin: auto; 
+  }
+  
+  .custom-table th, .custom-table td {
+    padding: 0.5rem; 
+  }
+  
+  h1 {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .min-h-screen {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegúrate de que este ajuste esté presente */
+}

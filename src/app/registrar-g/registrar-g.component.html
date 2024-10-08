@@ -1,0 +1,45 @@
+<app-home></app-home>
+<app-header></app-header>
+<h1 class="text-3xl font-extrabold text-center mt-6 text-gray-800">REGISTROS DE GRANJA</h1>
+<div class="flex justify-center items-center mt-6">  
+  <div class="flex flex-wrap space-x-4">
+      <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow" routerLink="/form-granja">Nuevo Registro</button>
+      <button class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded shadow" type="button" routerLink="/dashboard">Volver</button>
+    <div class="col">
+      <input class="rounded-full border-gray-300 shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none px-4 py-2 w-full" type="search" placeholder="Buscar" [(ngModel)]="filter.searchTerm" name="searchTerm">
+    </div>
+  </div>
+</div>
+  <div class="overflow-x-auto mt-8">
+    <table class="w-11/12  max-w-3xl mx-auto bg-white border border-gray-200 rounded-lg shadow-lg">
+      <thead> 
+        <tr class="bg-blue-600 text-white uppercase text-sm leading-normal">
+          <th  class="py-3 bg-blue-600">ID</th>
+          <th  class="py-3 bg-blue-600">Nombre de la Granja</th>
+          <th  class="py-3 bg-blue-600">Dirección</th>
+          <th  class="py-3 bg-blue-600">Teléfono</th>
+          <th  class="py-3 bg-blue-600">Email</th>
+          <th  class="py-3 bg-blue-600">Id Usuario</th>
+          <th  class="py-3 bg-blue-600">Editar</th>
+          <th  class="py-3 bg-blue-600">Eliminar</th>
+        </tr>
+      </thead>
+      <tbody  class="text-gray-800 text-sm font-light">
+        <tr *ngFor="let granja of filterGranjas()" class="border-b border-gray-200 hover:bg-gray-100">
+          <th class="py-2 px-3 text-center">{{ granja.id_granja }}</th>
+          <td class="py-2 px-3 text-center">{{ granja.nombre_granja }}</td>
+          <td class="py-2 px-3 text-center">{{ granja.direccion }}</td>
+          <td class="py-2 px-3 text-center">{{ granja.telefono }}</td>
+          <td class="py-2 px-3 text-center">{{ granja.email }}</td>
+          <td class="py-2 px-3 text-center">{{ granja.id_usuario }}</td>
+          
+            <td class="py-2 px-3 text-center">
+              <button type="button" name="button "class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-1 px-2 rounded shadow" [routerLink]="['/form-granja', granja.id_granja]">Editar</button></td>
+            <td class="py-2 px-3 text-center">
+              <button type="button" name="button "class="bg-red-500 hover:bg-red-600 text-white font-bold py-1 px-2 rounded shadow" (click)="delete(granja.id_granja)">Eliminar</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  

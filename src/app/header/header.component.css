@@ -1,0 +1,17 @@
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .nav-items {
+    display: flex;
+    align-items: center;
+  }
+  
+  .fullscreen-button {
+    margin-left: 20px; /* Espacio entre el botón y el dropdown */
+  }
+  
+  
