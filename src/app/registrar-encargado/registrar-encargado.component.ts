@@ -69,13 +69,13 @@ export class RegistrarEncargadoComponent  implements OnInit {
   
 
 
-//     filter: any = { searchTerm: '' }; 
+     filter: any = { searchTerm: '' }; 
 
-// filterEncargados() {
-//   return this.encargados.filter(encargado =>
-//     encargado.nombre.toLowerCase().includes(this.filter.searchTerm.toLowerCase()) ||
-//     encargado.apellido.toLowerCase().includes(this.filter.searchTerm.toLowerCase()) 
-//   );
-// }
+ filterEncargados() {
+   return this.encargados.filter(encargado =>
+     encargado.nombre.toLowerCase().includes(this.filter.searchTerm.toLowerCase()) ||
+     encargado.apellido.toLowerCase().includes(this.filter.searchTerm.toLowerCase()) 
+   );
+ }
 }
 
