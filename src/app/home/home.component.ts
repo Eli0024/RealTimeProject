@@ -3,12 +3,13 @@ import { Router, RouterLink } from '@angular/router';
 import { DashboardComponent } from '../dashboard/dashboard.component';
 import { PerfilComponent } from '../perfil/perfil/perfil.component';
 import { Authservice } from '../auth/auth.service';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink, DashboardComponent, PerfilComponent],
+  imports: [RouterLink, DashboardComponent, PerfilComponent, CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
@@ -46,6 +47,12 @@ export class HomeComponent {
 
   imagenUrl(item: any): string {
     return `http://localhost:8000${item.imagen}`;
+  }
+
+  activeButton: string = 'dashboard'; 
+
+  setActiveButton(button: string) {
+    this.activeButton = button;
   }
 
 }

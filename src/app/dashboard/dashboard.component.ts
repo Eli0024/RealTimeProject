@@ -290,8 +290,9 @@ export class DashboardComponent implements OnInit {
     return `http://localhost:8000${item.imagen}`;
   }
 
-  darkMode = signal<boolean>(false);
-  @HostBinding('class.dark') get mode() {
-    return this.darkMode();
+  activeButton: string = 'dashboard'; 
+
+  setActiveButton(button: string) {
+    this.activeButton = button;
   }
 }
